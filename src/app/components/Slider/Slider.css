@@ -1,0 +1,36 @@
+.slider {
+    width: 1920px;
+    height: 960px;
+    gap: 0px;
+    opacity: 0;
+    background: linear-gradient(
+        254.87deg,
+        rgba(68, 76, 95, 0.38) 2.07%,
+        #444c5f 68.18%
+      ),
+      linear-gradient(0deg, rgba(55, 66, 92, 0.41), rgba(55, 66, 92, 0.41)),
+      url("https://s3-alpha-sig.figma.com/img/5daa/8003/6cee5f525bf1c6f1a4c785b5e71c317c?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IMEDuMHXV~~kYmES8I7YKa7kdlIORQlhoLUYr4Y6pzU1BDo5yQb4NoUu1m-EDqkAWh4ZBnRFf4cxAC2P0Ej2ucoGO-izVnlIt~SZF87Dq3pr4PRXyM2I~ytlp3X3d6ngjw5g9usyah3rfPBJtNE-sgbbqKX0K~zIDbUa-zGPD-wVCTzeqe5-~2MY6X-s2NfZOHnI3aYopyDPMWhCXVickXSMdFvDptzVaLPmOWgLT0tmdcuwkHIueCLDEy1U8uBQxNw4X9MZ95oWCdNngw0GHZshBp64D2P7pcsMOKTbMfbahsgzmBAYgifTXBJnTrPvwVGJ6A9TIfrcBlbkJk0eUA__");
+    background-size: cover;
+  }
+  
+  .content {
+    width: 746px;
+    height: 265px;
+    top: 383px;
+    left: 170px;
+    gap: 0px;
+    opacity: 0;
+    font-family: Nobile;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 76px;
+    text-align: left;
+    color: white;
+    position: absolute;
+  }
+  
+  .welcome-text {
+    position: relative;
+    z-index: 10;
+  }
+  
