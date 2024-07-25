@@ -24,11 +24,11 @@ const BlogContent = () => {
               variant="h5"
               align="center"
               sx={{
-                padding: "16px", // equivalent to theme.spacing(4)
+                padding: "16px",
                 color: "#3F485E",
-                marginBlock: { xs: 6, sm: 4, md: 10 }, // Responsive margin
-                lineHeight: { xs: "50px", sm: "60px", md: "80px" }, // Responsive line-height
-                fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.8rem" }, // Responsive font-size
+                marginBlock: { xs: 6, sm: 4, md: 10 },
+                lineHeight: { xs: "50px", sm: "60px", md: "80px" },
+                fontSize: { xs: "1.2rem", sm: "1.5rem", md: "1.8rem" },
               }}
             >
               At The OurWebsite, we are dedicated to helping you excel in the
@@ -111,7 +111,7 @@ const BlogContent = () => {
                         textAlign: { xs: "center", sm: "center", md: "left" },
                         fontWeight: 500,
                         lineHeight: "46px",
-                        fontSize: { xs: "1.5rem", sm: "2rem", md: "2.3rem" }, // Example of responsive font-size
+                        fontSize: { xs: "1.5rem", sm: "2rem", md: "2.3rem" },
                         mt: "45px",
                         mb: "30px",
                         mx: "2px",
