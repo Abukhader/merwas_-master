@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -8,57 +10,63 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Footer = () => {
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+
   return (
     <AppBar
       position="static"
       sx={{
         width: "100%",
-        height: "476px",
         backgroundColor: "#3F485E",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        py: isSmallScreen ? 4 : 6, // Adjust padding for small screens
+        px: 2, // Adjust horizontal padding
       }}
     >
-      <Toolbar sx={{ flexDirection: "column" }}>
+      <Toolbar sx={{ flexDirection: "column", width: "100%", maxWidth: 1200 }}>
         <Typography
           variant="h3"
           component="div"
           sx={{
-            fontSize: "35px",
+            fontSize: { xs: "24px", sm: "30px", md: "35px" }, // Responsive font size
             fontWeight: 700,
-            lineHeight: "44.8px",
+            lineHeight: { xs: "36px", sm: "44px" }, // Responsive line height
             textAlign: "center",
             color: "white",
-            marginBottom: "20px",
+            mb: 2,
           }}
         >
-          Subscribe our newsletter
+          Subscribe to our newsletter
         </Typography>
         <Typography
           variant="body1"
           component="div"
           sx={{
-            fontSize: "16px",
+            fontSize: { xs: "14px", sm: "16px" }, // Responsive font size
             fontWeight: 400,
-            lineHeight: "30px",
+            lineHeight: { xs: "24px", sm: "30px" }, // Responsive line height
             textAlign: "center",
             color: "white",
-            mb: 5,
+            mb: 4,
           }}
         >
-          Your download should start automatically, if not Click here. Should I
+          Your download should start automatically, if not click here. Should I
           give up, huh?.
         </Typography>
         <div
           style={{
             display: "flex",
+            flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
-            marginBottom: "20px",
+            gap: isSmallScreen ? "-1px" : "0px",
+            mb: 4,
           }}
         >
           <TextField
@@ -66,13 +74,11 @@ const Footer = () => {
             label="Enter your email"
             variant="outlined"
             sx={{
-              width: "400px",
+              width: isSmallScreen ? "100%" : "400px",
               height: "60px",
               borderRadius: "65px 0 0 65px",
               border: "none",
-              borderBottom: "1px solid white",
               backgroundColor: "#fff",
-              color: "white",
               "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
                 border: "none",
               },
@@ -81,11 +87,11 @@ const Footer = () => {
           <Button
             variant="contained"
             sx={{
-              width: "180px",
               height: "60px",
               borderRadius: "0 65px 65px 0",
               backgroundColor: "#858585",
               color: "white",
+              width: isSmallScreen ? "100%" : "180px",
             }}
           >
             Subscribe
@@ -95,23 +101,23 @@ const Footer = () => {
           style={{
             display: "flex",
             justifyContent: "center",
-            gap: "30px",
-            marginTop: 10,
+            gap: isSmallScreen ? "15px" : "30px",
+            marginTop: isSmallScreen ? "10px" : "20px",
             cursor: "pointer",
           }}
         >
-          <Typography sx={{ color: "white", width: "20px" }}>
-            <FacebookIcon />
-          </Typography>
-          <Typography sx={{ color: "white", width: "20px" }}>
-            <InstagramIcon />
-          </Typography>
-          <Typography sx={{ color: "white", width: "20px" }}>
-            <LinkedInIcon />
-          </Typography>
-          <Typography sx={{ color: "white", width: "20px" }}>
-            <TwitterIcon />
-          </Typography>
+          <FacebookIcon
+            sx={{ color: "white", fontSize: isSmallScreen ? "20px" : "24px" }}
+          />
+          <InstagramIcon
+            sx={{ color: "white", fontSize: isSmallScreen ? "20px" : "24px" }}
+          />
+          <LinkedInIcon
+            sx={{ color: "white", fontSize: isSmallScreen ? "20px" : "24px" }}
+          />
+          <TwitterIcon
+            sx={{ color: "white", fontSize: isSmallScreen ? "20px" : "24px" }}
+          />
         </div>
       </Toolbar>
     </AppBar>

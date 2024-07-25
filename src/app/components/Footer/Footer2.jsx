@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -6,27 +8,33 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
-import { Stack } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 
 const Footer2 = () => {
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+
   return (
     <AppBar
       position="static"
       sx={{
         backgroundColor: "#3F485E",
-        margin: "0 auto", // لوضعه في المنتصف
+        margin: "0 auto",
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "center",
         alignItems: "center",
+        py: isSmallScreen ? 2 : 3, // Adjust padding for different screen sizes
+        px: 2,
       }}
     >
-      <Stack
+      <Toolbar
         sx={{
-          width: "1173px",
+          width: "100%",
+          maxWidth: "1173px",
           display: "flex",
-          textAlign: "center",
-          flexDirection: "row",
+          flexDirection: isSmallScreen ? "column" : "row",
           justifyContent: "space-between",
+          alignItems: "center",
+          textAlign: isSmallScreen ? "center" : "left",
         }}
       >
         <Typography
@@ -34,12 +42,11 @@ const Footer2 = () => {
           component="div"
           sx={{
             fontFamily: "Cairo",
-            fontSize: "13px",
+            fontSize: isSmallScreen ? "12px" : "13px",
             fontWeight: 400,
-            lineHeight: "15.85px",
-            textAlign: "center",
+            lineHeight: isSmallScreen ? "14px" : "15.85px",
             color: "#aaa",
-            mt: 5,
+            mb: isSmallScreen ? 2 : 0,
           }}
         >
           Copyright © 2024 OurWebsite. All Rights Reserved.
@@ -47,7 +54,12 @@ const Footer2 = () => {
 
         <FormControl
           variant="outlined"
-          sx={{ minWidth: 140, mt: 3, mb: 3, height: "50px" }}
+          sx={{
+            minWidth: isSmallScreen ? "100%" : 140,
+            mt: isSmallScreen ? 2 : 0,
+            mb: isSmallScreen ? 2 : 0,
+            height: "50px",
+          }}
         >
           <InputLabel id="language-select-label" sx={{ color: "#aaa" }}>
             English
@@ -57,9 +69,12 @@ const Footer2 = () => {
             id="language-select"
             label="Language"
             sx={{ color: "white" }}
-          ></Select>
+          >
+            {/* Add MenuItems here if needed */}
+            <MenuItem value={10}>عربي</MenuItem>
+          </Select>
         </FormControl>
-      </Stack>
+      </Toolbar>
     </AppBar>
   );
 };

@@ -38,9 +38,10 @@ export default function Partners() {
 
       <Grid container spacing={2} justifyContent="center" sx={{ mb: 15 }}>
         {/* بطاقة 1 */}
-        <Grid item xs={12} sm={3} sx={{ mx: 3 }}>
+        <Grid item xs={12} sm={6} md={4} lg={3} sx={{ px: 2 }}>
           <Card
             sx={{
+              margin: { xs: "0 auto", md: 0 },
               maxWidth: 300,
               borderRadius: "25px",
               transition: "transform 0.3s ease-in-out",
@@ -59,34 +60,36 @@ export default function Partners() {
               sx={{ objectFit: "contain" }}
             />
             <Divider sx={{ width: "50%", margin: "0 auto" }} />
-            <Typography
-              sx={{ textAlign: "center", mt: 2, mb: 2, mx: 2 }}
-              variant="body1"
-              color="text.secondary"
-            >
-              {partnerDescription}
-            </Typography>
+            <CardContent>
+              <Typography
+                sx={{ textAlign: "center", mt: 2, mb: 2 }}
+                variant="body1"
+                color="text.secondary"
+              >
+                {partnerDescription}
+              </Typography>
+            </CardContent>
             <Divider
               sx={{
                 bgcolor: "#EB6B2A",
                 height: "4px",
                 width: "75%",
                 margin: "0 auto",
-                borderRadius: "50px 50px 0 0 ",
+                borderRadius: "50px 50px 0 0",
               }}
             />
           </Card>
         </Grid>
 
         {/* بطاقة 2 */}
-        <Grid item xs={12} sm={3} sx={{ mx: "-10px" }}>
+        <Grid item xs={12} sm={6} md={4} lg={3} sx={{ px: 2 }}>
           <Card
             sx={{
+              margin: { xs: "0 auto", md: 0 },
               maxWidth: 300,
               borderRadius: "25px",
               transition: "transform 0.3s ease-in-out",
               cursor: "pointer",
-
               "&:hover": {
                 transform: "scale(1.05)",
                 boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
@@ -97,38 +100,40 @@ export default function Partners() {
               component="img"
               height="200"
               image={partnerImage}
-              alt="Partner 1"
+              alt="Partner 2"
               sx={{ objectFit: "contain" }}
             />
             <Divider sx={{ width: "50%", margin: "0 auto" }} />
-            <Typography
-              sx={{ textAlign: "center", mt: 2, mb: 2, mx: 2 }}
-              variant="body1"
-              color="text.secondary"
-            >
-              {partnerDescription}
-            </Typography>
+            <CardContent>
+              <Typography
+                sx={{ textAlign: "center", mt: 2, mb: 2 }}
+                variant="body1"
+                color="text.secondary"
+              >
+                {partnerDescription}
+              </Typography>
+            </CardContent>
             <Divider
               sx={{
                 bgcolor: "#EB6B2A",
                 height: "4px",
                 width: "75%",
                 margin: "0 auto",
-                borderRadius: "50px 50px 0 0 ",
+                borderRadius: "50px 50px 0 0",
               }}
             />
           </Card>
         </Grid>
 
         {/* بطاقة 3 */}
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3} sx={{ px: 2 }}>
           <Card
             sx={{
+              margin: { xs: "0 auto", md: 0 },
               maxWidth: 300,
               borderRadius: "25px",
               transition: "transform 0.3s ease-in-out",
               cursor: "pointer",
-
               "&:hover": {
                 transform: "scale(1.05)",
                 boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
@@ -139,24 +144,26 @@ export default function Partners() {
               component="img"
               height="200"
               image={partnerImage}
-              alt="Partner 1"
+              alt="Partner 3"
               sx={{ objectFit: "contain" }}
             />
             <Divider sx={{ width: "50%", margin: "0 auto" }} />
-            <Typography
-              sx={{ textAlign: "center", mt: 2, mb: 2, mx: 2 }}
-              variant="body1"
-              color="text.secondary"
-            >
-              {partnerDescription}
-            </Typography>
+            <CardContent>
+              <Typography
+                sx={{ textAlign: "center", mt: 2, mb: 2 }}
+                variant="body1"
+                color="text.secondary"
+              >
+                {partnerDescription}
+              </Typography>
+            </CardContent>
             <Divider
               sx={{
                 bgcolor: "#EB6B2A",
                 height: "4px",
                 width: "75%",
                 margin: "0 auto",
-                borderRadius: "50px 50px 0 0 ",
+                borderRadius: "50px 50px 0 0",
               }}
             />
           </Card>

@@ -20,38 +20,45 @@ export default function About() {
             <br /> easily without any coding.
           </Typography>
         </Box>
-        <Grid container sx={{ my: 10 }}>
+        <Grid container sx={{ my: 10 }} spacing={4}>
           <Grid item xs={12} md={6}>
             <Stack spacing={4}>
               <Typography
                 variant="h4"
-                sx={{ color: "#EB6B2A", fontWeight: "bold" }}
+                sx={{
+                  color: "#EB6B2A",
+                  fontWeight: "bold",
+                  textAlign: { xs: "center" },
+                }}
               >
                 Our Website
               </Typography>
               <Typography
                 variant="h5"
-                sx={{ color: "#555", fontWeight: "bold" }}
+                sx={{
+                  color: "#555",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                }}
               >
                 We offer more than just a workspace
               </Typography>
 
-              <Grid container>
+              <Grid container spacing={2}>
                 {/* الفقرة الأولى */}
                 <Grid item xs={12} sm={6}>
                   <Box
                     sx={{
                       display: "flex",
-                      alignItems: "center",
-                      mx: -5,
-                      width: "300px",
+                      alignItems: "flex-start",
+
+                      width: "100%",
                     }}
                   >
                     <Rocket
                       sx={{
                         fontSize: 30,
                         color: "#EB6B2A",
-                        mb: 13,
                         mx: 1,
                       }}
                     />
@@ -70,9 +77,9 @@ export default function About() {
 
                 {/* الفقرة الثانية */}
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Box sx={{ display: "flex", alignItems: "flex-start" }}>
                     <EmojiObjects
-                      sx={{ fontSize: 30, color: "#EB6B2A", mb: 15, mx: 1 }}
+                      sx={{ fontSize: 30, color: "#EB6B2A", mx: 1 }}
                     />
                     <Stack spacing={1}>
                       <Typography variant="h6">Promoting Innovation</Typography>
@@ -90,13 +97,12 @@ export default function About() {
                   <Box
                     sx={{
                       display: "flex",
-                      alignItems: "center",
-                      mx: -5,
-                      width: "300px",
+                      alignItems: "flex-start",
+                      width: "100%",
                     }}
                   >
                     <FlightTakeoff
-                      sx={{ fontSize: 30, color: "#EB6B2A", mb: 13, mx: 1 }}
+                      sx={{ fontSize: 30, color: "#EB6B2A", mx: 1 }}
                     />
                     <Stack spacing={1}>
                       <Typography variant="h6">Mission Statement</Typography>
@@ -111,9 +117,9 @@ export default function About() {
 
                 {/* الفقرة الرابعة */}
                 <Grid item xs={12} sm={6}>
-                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Box sx={{ display: "flex", alignItems: "flex-start" }}>
                     <Visibility
-                      sx={{ fontSize: 30, color: "#EB6B2A", mb: 11, mx: 1 }}
+                      sx={{ fontSize: 30, color: "#EB6B2A", mx: 1 }}
                     />
                     <Stack spacing={1}>
                       <Typography variant="h6">Vision Statement</Typography>
@@ -128,16 +134,26 @@ export default function About() {
               </Grid>
             </Stack>
           </Grid>
-          <Grid item xs={12} md={3} sx={{ mx: 15 }}>
-            <img
-              src="https://s3-alpha-sig.figma.com/img/ba1d/7e5e/ed479fe21b9364e79219bc118326c555?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=O75nIpU6jJkV240tzD3Q4ng8ITgnlhFuTgiFqO4PRd2ERcK1FYvhrlSfcT4folppWbE0uHFC1PxWBhV2THqJjEP9JM6S7g8oPGgocrL1EEHc7hEGLCZLbR8L57Ogj6aCRyyndQ99wWBSEXBCvozzcxvTY4C76Y-T6Td4igthq7Y6sMzk5GZ2W-7855dAXgYAsK4tZ-VE0PZIQ2SNd1XbXdilQ1gcDSzZrDLGF20FL~S29UDDyglbI4U5nejYukoAht0ABKp6PNZ031zzi4rhCcBhWSjy71jZJFd2syk59Q5xbYJgifELBEsM8cY-IULoAflGiG1~IUJRI22b-o4qWQ__"
-              alt="About Us"
-              style={{
-                width: "470px",
-                height: "487px",
-                borderRadius: "20px",
+          <Grid item xs={12} md={6}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: { xs: "center", md: "flex-end" },
+                mt: { xs: 4, md: 0 },
               }}
-            />
+            >
+              <img
+                src="https://s3-alpha-sig.figma.com/img/ba1d/7e5e/ed479fe21b9364e79219bc118326c555?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=O75nIpU6jJkV240tzD3Q4ng8ITgnlhFuTgiFqO4PRd2ERcK1FYvhrlSfcT4folppWbE0uHFC1PxWBhV2THqJjEP9JM6S7g8oPGgocrL1EEHc7hEGLCZLbR8L57Ogj6aCRyyndQ99wWBSEXBCvozzcxvTY4C76Y-T6Td4igthq7Y6sMzk5GZ2W-7855dAXgYAsK4tZ-VE0PZIQ2SNd1XbXdilQ1gcDSzZrDLGF20FL~S29UDDyglbI4U5nejYukoAht0ABKp6PNZ031zzi4rhCcBhWSjy71jZJFd2syk59Q5xbYJgifELBEsM8cY-IULoAflGiG1~IUJRI22b-o4qWQ__"
+                alt="About Us"
+                style={{
+                  width: "100%",
+                  maxWidth: "470px",
+                  height: "75vh",
+                  borderRadius: "20px",
+                  marginTop: 1,
+                }}
+              />
+            </Box>
           </Grid>
         </Grid>
       </Container>

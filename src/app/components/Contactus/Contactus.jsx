@@ -45,40 +45,78 @@ export default function Contactus() {
           </Typography>
           <Typography
             variant="h4"
-            sx={{ textAlign: "left", mb: 2, color: "#3F485E" }}
+            sx={{
+              textAlign: { xs: "center", md: "left" },
+              mb: 2,
+              color: "#3F485E",
+            }}
           >
             Contact details
           </Typography>
 
           <Grid
             container
+            spacing={4}
             justifyContent="center"
             sx={{ textAlign: "center", pt: 5, pb: 8 }}
           >
             {/* Contact Details Column 1 */}
-            <Grid item xs={12} sm={3}>
-              <Stack spacing={2}>
+            <Grid item xs={12} sm={6} md={3}>
+              <Stack
+                spacing={3}
+                alignItems={{ xs: "center", md: "flex-start" }}
+              >
                 {/* Location */}
                 <Stack direction="row" alignItems="center" spacing={1}>
-                  <LocationOnIcon sx={{ color: "#aaa" }} />
-                  <Typography variant="subtitle1">Find Us</Typography>
+                  <LocationOnIcon
+                    sx={{
+                      color: "#aaa",
+                      transition: "color 0.3s",
+                      "&:hover": {
+                        color: "#3F485E",
+                      },
+                    }}
+                  />
+                  <Typography
+                    variant="subtitle1"
+                    sx={{
+                      transition: "color 0.3s",
+                      "&:hover": {
+                        color: "#3F485E",
+                      },
+                    }}
+                  >
+                    Find Us
+                  </Typography>
                 </Stack>
-                <Typography
-                  sx={{ textAlign: "left", pl: 5, color: "#999" }}
-                  variant="body1"
-                >
+                <Typography sx={{ color: "#999" }} variant="body1">
                   2301 AMMAN . JORDAN
                 </Typography>
 
                 {/* Working Hours */}
                 <Stack direction="row" alignItems="center" spacing={1}>
-                  <AccessTimeIcon sx={{ color: "#aaa" }} />
-                  <Typography variant="subtitle1">Working Hours</Typography>
+                  <AccessTimeIcon
+                    sx={{
+                      color: "#aaa",
+                      transition: "color 0.3s",
+                      "&:hover": {
+                        color: "#3F485E",
+                      },
+                    }}
+                  />
+                  <Typography
+                    variant="subtitle1"
+                    sx={{
+                      transition: "color 0.3s",
+                      "&:hover": {
+                        color: "#3F485E",
+                      },
+                    }}
+                  >
+                    Working Hours
+                  </Typography>
                 </Stack>
-                <Typography
-                  sx={{ textAlign: "left", pl: 5, color: "#999" }}
-                  variant="body1"
-                >
+                <Typography sx={{ color: "#999" }} variant="body1">
                   Mon-Fri: 8 AM - 5 PM
                   <br />
                   Sat-Sun: 8 AM - 2 PM
@@ -86,29 +124,94 @@ export default function Contactus() {
 
                 {/* Social Media */}
                 <Stack direction="row" alignItems="center" spacing={1}>
-                  <ShareIcon sx={{ color: "#aaa" }} />
-                  <Typography variant="subtitle1">Follow Us</Typography>{" "}
+                  <ShareIcon
+                    sx={{
+                      color: "#aaa",
+                      transition: "color 0.3s",
+                      "&:hover": {
+                        color: "#3F485E",
+                      },
+                    }}
+                  />
+                  <Typography
+                    variant="subtitle1"
+                    sx={{
+                      transition: "color 0.3s",
+                      "&:hover": {
+                        color: "#3F485E",
+                      },
+                    }}
+                  >
+                    Follow Us
+                  </Typography>
                 </Stack>
-                <Stack
-                  direction="row"
-                  paddingLeft={5}
-                  sx={{ cursor: "pointer" }}
-                >
-                  <FacebookIcon sx={{ color: "#aaa", mx: 1 }} />
-                  <TwitterIcon sx={{ color: "#aaa", mx: 1 }} />
-                  <InstagramIcon sx={{ color: "#aaa", mx: 1 }} />
+                <Stack direction="row" spacing={2}>
+                  <FacebookIcon
+                    sx={{
+                      color: "#aaa",
+                      transition: "color 0.3s",
+                      cursor: "pointer",
+
+                      "&:hover": {
+                        color: "#3b5998",
+                      },
+                    }}
+                  />
+                  <TwitterIcon
+                    sx={{
+                      color: "#aaa",
+                      transition: "color 0.3s",
+                      cursor: "pointer",
+
+                      "&:hover": {
+                        color: "#1da1f2",
+                      },
+                    }}
+                  />
+                  <InstagramIcon
+                    sx={{
+                      color: "#aaa",
+                      transition: "color 0.3s",
+                      cursor: "pointer",
+
+                      "&:hover": {
+                        color: "#e1306c",
+                      },
+                    }}
+                  />
                 </Stack>
               </Stack>
             </Grid>
             {/* Contact Details Column 2 */}
-            <Grid item xs={12} sm={3}>
-              <Stack spacing={2}>
+            <Grid item xs={12} sm={6} md={3}>
+              <Stack
+                spacing={3}
+                alignItems={{ xs: "center", md: "flex-start" }}
+              >
                 <Stack direction="row" alignItems="center" spacing={1}>
-                  <PhoneIcon sx={{ color: "#aaa" }} />
-                  <Typography variant="subtitle1">Phone</Typography>
+                  <PhoneIcon
+                    sx={{
+                      color: "#aaa",
+                      transition: "color 0.3s",
+                      "&:hover": {
+                        color: "#3F485E",
+                      },
+                    }}
+                  />
+                  <Typography
+                    variant="subtitle1"
+                    sx={{
+                      transition: "color 0.3s",
+                      "&:hover": {
+                        color: "#3F485E",
+                      },
+                    }}
+                  >
+                    Phone
+                  </Typography>
                 </Stack>
                 <Typography
-                  sx={{ textAlign: "left", pl: 5, color: "#999" }}
+                  sx={{ color: "#999", cursor: "pointer" }}
                   variant="body1"
                 >
                   + (06) 111-1111 <br /> + (06) 111-1111
@@ -116,11 +219,29 @@ export default function Contactus() {
 
                 {/* Write to Us */}
                 <Stack direction="row" alignItems="center" spacing={1}>
-                  <CreateIcon sx={{ color: "#aaa" }} />
-                  <Typography variant="subtitle1">Write to Us</Typography>
+                  <CreateIcon
+                    sx={{
+                      color: "#aaa",
+                      transition: "color 0.3s",
+                      "&:hover": {
+                        color: "#3F485E",
+                      },
+                    }}
+                  />
+                  <Typography
+                    variant="subtitle1"
+                    sx={{
+                      transition: "color 0.3s",
+                      "&:hover": {
+                        color: "#3F485E",
+                      },
+                    }}
+                  >
+                    Write to Us
+                  </Typography>
                 </Stack>
                 <Typography
-                  sx={{ textAlign: "left", pl: 5, color: "#999" }}
+                  sx={{ color: "#999", cursor: "pointer" }}
                   variant="body1"
                 >
                   info@ourwebsite.com
@@ -130,21 +251,26 @@ export default function Contactus() {
               </Stack>
             </Grid>
             {/* Have a Question Section */}
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} md={6}>
               <Box>
-                <Typography sx={{ color: "#3F485E" }} variant="h4">
+                <Typography sx={{ color: "#3F485E", mb: 2 }} variant="h4">
                   Have a Question?
                 </Typography>
                 <form>
                   <Grid container spacing={2}>
                     <Grid item xs={12}>
                       <Typography sx={{ textAlign: "left", color: "#aaa" }}>
-                        types
+                        Types
                       </Typography>
                       <Select
                         fullWidth
                         variant="outlined"
-                        sx={{ borderRadius: 50 }}
+                        sx={{
+                          borderRadius: 50,
+                          "&:hover": {
+                            borderColor: "#3F485E",
+                          },
+                        }}
                       >
                         <MenuItem value="">Select Item</MenuItem>
                         <MenuItem value="item1">Item 1</MenuItem>
@@ -158,7 +284,12 @@ export default function Contactus() {
                         fullWidth
                         label="Full Name"
                         variant="outlined"
-                        sx={{ borderRadius: 50 }}
+                        sx={{
+                          borderRadius: 50,
+                          "& .MuiOutlinedInput-root:hover fieldset": {
+                            borderColor: "#3F485E",
+                          },
+                        }}
                       />
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -166,7 +297,12 @@ export default function Contactus() {
                         fullWidth
                         label="Email"
                         variant="outlined"
-                        sx={{ borderRadius: 50 }}
+                        sx={{
+                          borderRadius: 50,
+                          "& .MuiOutlinedInput-root:hover fieldset": {
+                            borderColor: "#3F485E",
+                          },
+                        }}
                       />
                     </Grid>
                     <Grid item xs={12}>
@@ -176,7 +312,12 @@ export default function Contactus() {
                         rows={4}
                         label="Your Message"
                         variant="outlined"
-                        sx={{ borderRadius: 50 }}
+                        sx={{
+                          borderRadius: 50,
+                          "& .MuiOutlinedInput-root:hover fieldset": {
+                            borderColor: "#3F485E",
+                          },
+                        }}
                       />
                     </Grid>
 
@@ -184,13 +325,14 @@ export default function Contactus() {
                       <Button
                         sx={{
                           borderRadius: "50px",
-                          width: "50%",
-                          display: "flex",
+                          width: "100%",
                           bgcolor: "#3F485E",
+                          "&:hover": {
+                            bgcolor: "#2c3e50",
+                          },
                         }}
                         variant="contained"
                         color="primary"
-                        fullWidth
                       >
                         Send
                       </Button>
@@ -207,7 +349,7 @@ export default function Contactus() {
               width="100%"
               height="400"
               loading="lazy"
-              allowfullscreen
+              allowFullScreen
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6785044.877358717!2d34.57457505427389!3d31.011539104045627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1503292b312f7e1d%3A0x80e3773b7c1c0a47!2sJordan!5e0!3m2!1sen!2sjo!4v1625215168791!5m2!1sen!2sjo"
             ></iframe>
           </Box>
